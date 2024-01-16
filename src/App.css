@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.NikeLogo {
+  width: 80px;
+  height: 55px;
+
+  /* border: 1px solid black; */
+}
+.miniNavbar {
+  display: flex;
+  /* border: 2px solid green; */
+  justify-content: space-between;
+    height: 72px;
+  align-items: center;
+}
+.miniNavbar li a:hover {
+  color: red;
+}
+.miniNavbar ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.miniNavbar a {
+  color: black;
+}
+.miniNavbar button {
+  all: unset;
+  background-color: #de2121;
+  color: wheat;
+  padding: 6px 16px;
+  height: 32px;
+  font-weight: 500;
+  border-radius: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 72px);
+}
+
+.Hero-Image {
+  border: 2px solid black;
+  height: 500px;
+  width: 500px;
+  border-radius: 5px;
+}
+.Hero-Image img {
+  height: 400px;
+}
+.Hero-Content h1 {
+  font-weight: 800;
+  line-height: 102px;
+  font-size: 108px;
+  text-transform: uppercase;
+}
+.Hero-Content p {
+  font-size: 20px;
+  color: rgb(88, 85, 85);
+  text-transform: uppercase;
+  max-width: 420px;
+}
+.Hero-Content p:hover {
+  color: #de2121;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(79, 25, 25);
+}
+.Facebook-logo {
+  width: 70px;
+}
+.Amazon-logo {
+  width: 45px;
+}
+.firstButton {
+  color: white;
+  background-color: red;
+  padding: 5px 14px;
+  font-size: 20px;
+  border: 1px solid black;
+}
+
+.secondButton {
+  /* color: white; */
+  background: transparent;
+  padding: 5px 14px;
+  font-size: 20px;
+  border: 1px solid black;
+  margin-inline: 29px;
+}
+.Hero-Content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 36px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 455px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-wrap: scroll;
   }
-  to {
-    transform: rotate(360deg);
+  .Hero-Image{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 955px){
+  .hero {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-wrap: scroll;
+  }
+}
+@media only screen and (max-width: 1300px){
+  .hero {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-wrap: scroll;
+    
   }
 }
